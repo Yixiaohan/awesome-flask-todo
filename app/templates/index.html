@@ -1,1 +1,19 @@
-{{ text }}
+<table class="table">
+    <thead>
+        <tr>
+            <td>Content</td>
+            <td>Time</td>
+            <td>Status</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for t in todos %}
+        <tr>
+            <td>{{ t.content  }}</td>
+            <td>{{ t.time  }}</td>
+            <td>{{ t.status  }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
