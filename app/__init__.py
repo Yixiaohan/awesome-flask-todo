@@ -2,9 +2,12 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
+from flask.ext.mongoengine import MongoEngine
+
 
 app = Flask(__name__)
 app.config.from_object("config")
 
-from app import views, models
+db = MongoEngine(app)
 
+from app import views, models
